@@ -4,7 +4,7 @@ from userbot.events import register
 @register(outgoing=True, pattern='^.lw ?(.*)')
 async def fakeload(e):
 	inp = e.pattern_match.group(1)
-	load = ["🤡","🤡","🤡","🤡","🤡","🤡","🤡","🤡"]
+	load = ["|","||","|||","||||","|||||","||||||","|||||||","||||||||"]
 	bar = ""
 	count = 0
 	await e.edit("`[Разъёб логов от венри(@wenryftg)]`")
@@ -15,7 +15,7 @@ async def fakeload(e):
 			await e.edit(f"`{bar}{division}{space}[{count}%]`")
 			count += 1
 			sleep(0.3)
-			if count == 101:
+			if count == 1000:
 				break
 		bar += "🤡"
 	sleep(2)
